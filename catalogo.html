@@ -834,7 +834,7 @@
             <div class="obs-hint">Se muestran como botones de talla en la tarjeta y en el pedido.</div>
           </div>
           <!-- (6) OPCIONES DE ENVÍO (antes estaban en Ajustes) -->
-          <div class="sub-title">🚚 Opciones de envío (República Dominicana)</div>
+          <div class="sub-title">🚚 Opciones de envío (Colombia)</div>
           <div class="field">
             <label>Toca las transportadoras que manejas para este ítem</label>
             <div class="obs-hint" style="margin:0 0 9px">Se marcan al instante: lo que selecciones aparecerá en el panel “Tu pedido / consulta” cuando el cliente lleve este producto.</div>
@@ -1595,6 +1595,16 @@ alter table shop_products add column if not exists home_service text;
   const SVG_GLOBE = '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.8 3.6 2.8 14.4 0 18-2.8-3.6-2.8-14.4 0-18z"/></svg>';
   const SVG_BIKE = '<svg viewBox="0 0 24 24"><circle cx="5.5" cy="17.5" r="3"/><circle cx="18.5" cy="17.5" r="3"/><path d="M8 17.5h5l3-8h2M13 9.5H9.5"/></svg>';
   const CARRIER_META = {
+    'Envía': { bg: 'linear-gradient(135deg,#e30613,#ff5a5f)', mono: 'ENVÍA' },
+    'Coordinadora': { bg: 'linear-gradient(135deg,#0b3d91,#1e6fd9)', mono: 'COORD' },
+    'Servientrega': { bg: 'linear-gradient(135deg,#00843d,#34c759)', mono: 'SER' },
+    'Saferbo': { bg: 'linear-gradient(135deg,#7c2d12,#f97316)', mono: 'SAF' },
+    'TCC': { bg: 'linear-gradient(135deg,#b45309,#fbbf24)', mono: 'TCC' },
+    '99 Envíos': { bg: 'linear-gradient(135deg,#dc2626,#f87171)', mono: '99' },
+    'Interrapidísimo': { bg: 'linear-gradient(135deg,#ff6a00,#ffb000)', mono: 'INTER' },
+    'Deprisa': { bg: 'linear-gradient(135deg,#0f766e,#2dd4bf)', mono: 'DEP' },
+    'Mensajeros Urbanos': { bg: 'linear-gradient(135deg,#111827,#6b7280)', ico: SVG_BIKE },
+    '4-72 Correos de Colombia': { bg: 'linear-gradient(135deg,#1e3a8a,#3b82f6)', ico: SVG_MAIL },
     'Reparto propio del comercio': { bg: 'linear-gradient(135deg,#F2BA17,#d99f0b)', ico: SVG_MOTO },
     'Recogida en tienda': { bg: 'linear-gradient(135deg,#0f766e,#14b8a6)', ico: SVG_STORE },
     'INPOSDOM — Correo Dominicano': { bg: 'linear-gradient(135deg,#0b5ea8,#c8102e)', ico: SVG_MAIL },
@@ -1614,17 +1624,16 @@ alter table shop_products add column if not exists home_service text;
     'Reparto propio del comercio',
     'Recogida en tienda',
     'Pickup / Delivery en moto',
-    'INPOSDOM — Correo Dominicano',
-    'Domex',
-    'Caribe Express',
-    'Vimenpaq',
-    'ORDAN (Enpransa)',
-    'Transporte Blanco',
-    'Mensajería Nacional',
-    'DHL Express',
-    'FedEx',
-    'UPS',
-    'Courier / Casillero (Aeropaq, Blue Courier)'
+    'Envía',
+    'Coordinadora',
+    'Servientrega',
+    'Saferbo',
+    'TCC',
+    '99 Envíos',
+    'Interrapidísimo',
+    'Deprisa',
+    'Mensajeros Urbanos',
+    '4-72 Correos de Colombia'
   ];
   function carrierIconHtml(name) {
     const meta = CARRIER_META[name] || { bg: 'linear-gradient(135deg,#334155,#64748b)', ico: SVG_GLOBE };
