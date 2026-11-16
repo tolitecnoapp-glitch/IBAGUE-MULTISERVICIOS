@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="preconnect" href="https://i.imgur.com">
 <style>
-:root{color-scheme:light;--bg:#f5f5f0;--surface:#fbfbf8;--soft:#efeee8;--text:#1f1f1f;--muted:#6b6b6b;--line:rgba(0,0,0,.1);--accent:#F2BA17;--deep:#F2BA17;--shadow:0 24px 70px rgba(180,140,20,.15)}:root[data-theme=dark]{color-scheme:light;--bg:#f5f5f0;--surface:#fbfbf8;--soft:#efeee8;--text:#1f1f1f;--muted:#6b6b6b;--line:rgba(0,0,0,.1);--shadow:0 26px 80px rgba(0,0,0,.12)}*{box-sizing:border-box}html{scroll-behavior:smooth;background:var(--bg)}body{margin:0;min-width:320px;background:var(--bg);color:var(--text);font-family:Arial,"Segoe UI",sans-serif;transition:.3s}button,input,select{font:inherit}button{color:inherit}a{text-decoration:none;color:inherit}svg{width:20px;height:20px}.hidden{display:none!important}.app{min-height:100vh;overflow:hidden;background:radial-gradient(circle at 75% 6%,rgba(242,186,23,.14),transparent 28%),var(--bg)}
+:root{color-scheme:light;--bg:#f5f5f0;--surface:#fbfbf8;--soft:#efeee8;--text:#1f1f1f;--muted:#6b6b6b;--line:rgba(0,0,0,.1);--accent:#F2BA17;--deep:#F2BA17;--shadow:0 24px 70px rgba(180,140,20,.15)}:root[data-theme=dark]{color-scheme:dark;--bg:#121212;--surface:#1a1a1a;--soft:#1f1f1f;--text:#F2BA17;--muted:#c99a14;--line:rgba(242,186,23,.2);--shadow:0 26px 80px rgba(0,0,0,.6)}*{box-sizing:border-box}html{scroll-behavior:smooth;background:var(--bg)}body{margin:0;min-width:320px;background:var(--bg);color:var(--text);font-family:Arial,"Segoe UI",sans-serif;transition:.3s}button,input,select{font:inherit}button{color:inherit}a{text-decoration:none;color:inherit}svg{width:20px;height:20px}.hidden{display:none!important}.app{min-height:100vh;overflow:hidden;background:radial-gradient(circle at 75% 6%,rgba(242,186,23,.14),transparent 28%),var(--bg)}
 .topbar{width:min(1160px,calc(100% - 40px));height:58px;margin:auto;display:flex;align-items:center;justify-content:space-between;position:relative;z-index:20}
 .actions{position:relative}
 .actions .user-profile-badge{display:none!important}
@@ -216,22 +216,22 @@ a.category-shop:hover{background:var(--soft);padding-left:8px}
 .user-profile-badge .badge-txt{display:flex;flex-direction:column;align-items:flex-start;gap:2px;line-height:1.1;min-width:0}
 .user-profile-badge span{font-size:12px;font-weight:700;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:140px}
 .user-profile-badge .role-tag{font-size:8.5px;padding:2px 6px;border-radius:10px;background:var(--soft);color:var(--accent);text-transform:uppercase;font-weight:800;white-space:nowrap;letter-spacing:.03em}
-.user-profile-badge.logged-out{padding:3px 14px;gap:6px}
-.user-profile-badge.logged-out svg{width:15px;height:15px;color:var(--accent);flex-shrink:0}
-.user-profile-badge.logged-out span{font-size:12px;color:var(--accent);font-weight:800}
+.user-profile-badge.logged-out{padding:2px 8px;gap:4px;max-width:none}
+.user-profile-badge.logged-out svg{width:12px;height:12px;color:var(--accent);flex-shrink:0}
+.user-profile-badge.logged-out span{font-size:11px;color:var(--accent);font-weight:800}
 .btn-logout{background:transparent;border:0;color:var(--muted);cursor:pointer;padding:4px;display:flex;align-items:center}
 .btn-logout:hover{color:#ff5e76}
 
 /* (4) MENÚ HAMBURGUESA + PANEL LATERAL */
 .brand-wrap{display:flex;align-items:center;min-width:0;gap:10px;flex:1}
 .menu-btn{width:44px;height:44px;flex-shrink:0;display:grid;place-items:center;padding:0;border:0;border-radius:12px;background:transparent;color:var(--deep);cursor:pointer;transition:.25s}
-:root[data-theme=dark] .menu-btn{color:#1f1f1f}
+:root[data-theme=dark] .menu-btn{color:#F2BA17}
 .menu-btn:hover{background:rgba(242,186,23,.12)}
 .menu-btn svg{width:26px;height:26px}
 .drawer-backdrop{position:fixed;inset:0;z-index:940;background:rgba(2,14,26,.18);opacity:0;pointer-events:none;transition:opacity .3s}
 .drawer-backdrop.open{opacity:1;pointer-events:auto}
 .drawer{position:fixed;top:0;left:0;bottom:0;z-index:950;width:min(250px,72vw);display:flex;flex-direction:column;background:rgba(255,255,255,.72);color:var(--text);border-right:1px solid var(--line);box-shadow:0 30px 90px rgba(0,8,18,.3);transform:translateX(-105%);transition:transform .38s cubic-bezier(.2,.8,.2,1),background .3s,color .3s}
-:root[data-theme=dark] .drawer{background:rgba(251,251,248,.85)}
+:root[data-theme=dark] .drawer{background:rgba(18,18,18,.94)}
 .drawer-item:hover{background:rgba(242,186,23,.14)}
 .drawer.open{transform:translateX(0)}
 .drawer-head{position:relative;display:flex;align-items:center;gap:12px;padding:18px 70px 16px 20px;border-bottom:1px solid var(--line)}
@@ -259,8 +259,8 @@ a.category-shop:hover{background:var(--soft);padding-left:8px}
   .user-profile-badge{padding:3px 8px 3px 3px;gap:6px;max-width:160px}
   .user-profile-badge img{width:28px;height:28px}
   .user-profile-badge span{font-size:11px;max-width:80px}
-  .user-profile-badge.logged-out{padding:3px 10px}
-  .user-profile-badge.logged-out span{font-size:11px}
+  .user-profile-badge.logged-out{padding:2px 6px}
+  .user-profile-badge.logged-out span{font-size:10px}
   /* (8) Popup pequeño que entra de izquierda a derecha */
   .sell-btn{position:fixed;left:14px;bottom:18px;z-index:90;min-height:40px;padding:0 16px;font-size:13px;border-radius:30px;box-shadow:0 12px 30px rgba(242,186,23,.45);animation:sellIn .7s cubic-bezier(.2,.9,.25,1.2) both,sellPulse 2.6s 1s ease-in-out infinite}
   .sell-btn svg{width:16px;height:16px}
@@ -330,6 +330,23 @@ a.category-shop:hover{background:var(--soft);padding-left:8px}
 #productsModal{z-index:1150}
 .modal.products{width:min(560px,100%)}
 .pm-list{margin-top:14px;display:flex;flex-direction:column}
+
+/* MODO OSCURO PROFESIONAL: fondo #121212 y textos en amarillo con buen contraste */
+:root[data-theme=dark] body,:root[data-theme=dark] .app{background:#121212}
+:root[data-theme=dark] .hero{background:#121212}
+:root[data-theme=dark] .modal{background:#1a1a1a;box-shadow:0 35px 100px rgba(0,0,0,.7)}
+:root[data-theme=dark] .primary,:root[data-theme=dark] .pwa-btn-ring,:root[data-theme=dark] .price-tag{color:#121212}
+:root[data-theme=dark] .theme span.active{color:#121212}
+:root[data-theme=dark] .drawer-item i{color:#121212}
+:root[data-theme=dark] .drawer-item i svg{color:#121212}
+:root[data-theme=dark] .pwa-banner{background:#121212}
+:root[data-theme=dark] .shops-panel{background:linear-gradient(145deg,rgba(242,186,23,.07),rgba(242,186,23,.02))}
+:root[data-theme=dark] .category-empty,:root[data-theme=dark] .empty{border-color:rgba(242,186,23,.2)}
+:root[data-theme=dark] .shop h3,:root[data-theme=dark] .heading h2,:root[data-theme=dark] .modal h2{color:#F2BA17}
+:root[data-theme=dark] form input,:root[data-theme=dark] form select{color:#F2BA17;background:#1f1f1f}
+:root[data-theme=dark] form input::placeholder{color:#c99a14;opacity:.7}
+:root[data-theme=dark] .user-profile-badge{background:#1a1a1a}
+:root[data-theme=dark] .user-profile-badge .role-tag,:root[data-theme=dark] .drawer-user .du-role{color:#121212;background:#F2BA17}
 </style>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head><body>
